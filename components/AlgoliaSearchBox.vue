@@ -74,8 +74,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import '../styles/palette.less';
+<style lang="scss">
+@import '../styles/palette.scss';
 
 .algolia-search-wrapper {
   & > span {
@@ -108,7 +108,7 @@ export default {
       }
 
       .ds-suggestion {
-        border-bottom: 1px solid @borderColor;
+        border-bottom: 1px solid $borderColor;
       }
     }
 
@@ -117,13 +117,13 @@ export default {
     }
 
     .algolia-docsearch-suggestion {
-      border-color: @borderColor;
+      border-color: $borderColor;
       padding: 0;
 
       .algolia-docsearch-suggestion--category-header {
         padding: 5px 10px;
         margin-top: 0;
-        background: @accentColor;
+        background: $accentColor;
         color: #fff;
         font-weight: 600;
 
@@ -139,13 +139,13 @@ export default {
       .algolia-docsearch-suggestion--title {
         font-weight: 600;
         margin-bottom: 0;
-        color: @textColor;
+        color: $textColor;
       }
 
       .algolia-docsearch-suggestion--subcategory-column {
         vertical-align: top;
         padding: 5px 7px 5px 5px;
-        border-color: @borderColor;
+        border-color: $borderColor;
         background: #f1f3f5;
 
         &:after {
@@ -159,17 +159,17 @@ export default {
     }
 
     .algolia-docsearch-footer {
-      border-color: @borderColor;
+      border-color: $borderColor;
     }
 
     .ds-cursor .algolia-docsearch-suggestion--content {
       background-color: #e7edf3 !important;
-      color: @textColor;
+      color: $textColor;
     }
   }
 }
 
-@media (min-width: @MQMobile) {
+@media (min-width: $MQMobile) {
   .algolia-search-wrapper {
     .algolia-autocomplete {
       .algolia-docsearch-suggestion {
@@ -195,7 +195,7 @@ export default {
   }
 }
 
-@media (max-width: @MQMobile) {
+@media (max-width: $MQMobile) {
   .algolia-search-wrapper {
     .ds-dropdown-menu {
       min-width: calc(100vw - 4rem) !important;

@@ -115,14 +115,12 @@ function flatten(items, res) {
 }
 </script>
 
-<style lang="less">
-@import '../styles/palette.less';
-@import '../styles/wrapper.less';
+<style lang="scss">
+@import '../styles/palette.scss';
+@import '../styles/wrapper.scss';
 .page-nav {
   // @extend $wrapper;
-  & {
-    .wrapper;
-  }
+  @extend .wrapper;
   
   padding-top: 1rem;
   padding-bottom: 0;
@@ -130,7 +128,7 @@ function flatten(items, res) {
   .inner {
     min-height: 2rem;
     margin-top: 0;
-    border-top: 1px solid @borderColor;
+    border-top: 1px solid $borderColor;
     padding-top: 1.75rem;
     overflow: auto; // clear float
   }

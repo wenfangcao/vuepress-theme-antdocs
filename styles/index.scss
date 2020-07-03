@@ -1,16 +1,14 @@
-@import '~ant-design-vue/dist/antd.less';
+@import './palette.scss';
+@import './config.scss';
+@import './code.scss';
+@import './custom-blocks.scss';
+@import './arrow.scss';
+@import './wrapper.scss';
+@import './toc.scss';
 
-@import './palette.less';
-@import './config.less';
-@import './code.less';
-@import './custom-blocks.less';
-@import './arrow.less';
-@import './wrapper.less';
-@import './toc.less';
-
-@import './searchbox.less';
-@import './nprogress.less';
-// @import './pwa.less';
+@import './searchbox.scss';
+@import './nprogress.scss';
+// @import './pwa.scss';
 
 
 html,body {
@@ -22,8 +20,8 @@ html,body {
   -moz-osx-font-smoothing: grayscale; 
 }
 body{
-  font-size: @bodyFontSize;
-  color: @bodyTextColor;
+  font-size: $bodyFontSize;
+  color: $bodyTextColor;
 }
 
 *::-webkit-scrollbar {
@@ -42,7 +40,7 @@ body{
 }
 
 .page {
-  padding-left: @sidebarWidth - 2;
+  padding-left: $sidebarWidth - 2;
 }
 
 .navbar {
@@ -59,22 +57,21 @@ body{
 .sidebar {
   font-size: 14px;
   background-color: #fff;
-  width: @sidebarWidth - 2;
+  width: $sidebarWidth - 2;
   position: fixed;
   z-index: 10;
   margin: 0;
-  top: @navbarHeight + 2;
+  top: $navbarHeight + 2;
   left: 0;
   bottom: 0;
   box-sizing: border-box;
-  border-right: 1px solid @borderColor;
+  border-right: 1px solid $borderColor;
   overflow-y: auto;
 }
 
-.@{contentClass}:not(.custom) {
-  & {
-    .wrapper;
-  }
+.content__default:not(.custom) {
+  @extend .wrapper;
+
   p.demo {
     padding: 1rem 1.5rem;
     border: 1px solid #ddd;
@@ -86,7 +83,7 @@ body{
   }
 }
 
-.@{contentClass}.custom {
+.content__default.custom {
   padding: 0;
   margin: 0;
 
@@ -96,7 +93,7 @@ body{
 }
 
 a {
-  color: @accentColor;
+  color: $accentColor;
   text-decoration: none;
   &:link,
   &:visited,
@@ -108,7 +105,7 @@ a {
 
 p a code {
   font-weight: 400;
-  color: @accentColor;
+  color: $accentColor;
 }
 
 p{
@@ -147,9 +144,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   line-height: 1.25;
 
-  .@{contentClass}:not(.custom) > & {
-    margin-top: -(@navbarHeight+1.275);
-    padding-top: @navbarHeight + 2.3;
+  .content__default:not(.custom) > & {
+    margin-top: -($navbarHeight+1.275);
+    padding-top: $navbarHeight + 2.3;
     margin-bottom: 0;
 
     &:first-child {
@@ -209,7 +206,7 @@ p, ul, ol {
 
 hr {
   border: 0;
-  border-top: 1px solid @borderColor;
+  border-top: 1px solid $borderColor;
 }
 
 table {
@@ -235,7 +232,7 @@ th, td {
 .theme-container {
 
   &.no-navbar {
-    .@{contentClass}:not(.custom) > h1, h2, h3, h4, h5, h6 {
+    .content__default:not(.custom) > h1, h2, h3, h4, h5, h6 {
       margin-top: 1.5rem;
       padding-top: 0;
     }
@@ -246,7 +243,7 @@ th, td {
   }
 }
 
-@media (min-width: (@MQMobile + 1px)) {
+@media (min-width: ($MQMobile + 1px)) {
   .theme-container.no-sidebar {
     .sidebar {
       display: none;
@@ -260,7 +257,7 @@ th, td {
 
 // ant design style reset
 .ant-menu-horizontal{
-  line-height: @navbarHeight;
+  line-height: $navbarHeight;
   border-bottom: transparent;
 }
 
@@ -278,12 +275,12 @@ th, td {
 
   > .ant-menu-item:hover,
   > .ant-menu-submenu:hover {
-    border-top: 2px solid @accentColor;
+    border-top: 2px solid $accentColor;
     border-bottom: 2px solid transparent;
   }
 
   > .ant-menu-item-selected {
-    border-top: 2px solid @accentColor;
+    border-top: 2px solid $accentColor;
     border-bottom: 2px solid transparent;
   }
 }
@@ -291,5 +288,5 @@ th, td {
   transition: transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-@import './mobile.less';
-@import (optional) '~@docs/style.less';
+@import './mobile.scss';
+@import '~@docs/style.scss';

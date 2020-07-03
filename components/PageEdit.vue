@@ -107,15 +107,14 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import '../styles/palette.less';
-@import "../styles/wrapper.less";
+<style lang="scss">
+@import '../styles/palette.scss';
+@import '../styles/wrapper.scss';
+
 .page-edit {
   // @extend @wrapper
-  & {
-    .wrapper;
-  }
-  
+  @extend .wrapper;
+
   padding-top: 1rem;
   padding-bottom: 1rem;
   overflow: auto;
@@ -124,7 +123,7 @@ export default {
     display: inline-block;
 
     a {
-      color: lighten(@textColor, 25%);
+      color: lighten($textColor, 25%);
       margin-right: 0.25rem;
     }
   }
@@ -135,7 +134,7 @@ export default {
 
     .prefix {
       font-weight: 500;
-      color: lighten(@textColor, 25%);
+      color: lighten($textColor, 25%);
     }
 
     .time {
@@ -145,7 +144,7 @@ export default {
   }
 }
 
-@media (max-width: @MQMobile) {
+@media (max-width: $MQMobile) {
   .page-edit {
     .edit-link {
       margin-bottom: 0.5rem;

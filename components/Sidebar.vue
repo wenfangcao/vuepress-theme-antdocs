@@ -22,8 +22,8 @@ export default {
 };
 </script>
 
-<style lang="less">
-@import '../styles/palette.less';
+<style lang="scss">
+@import '../styles/palette.scss';
 
 .sidebar {
   ul {

@@ -122,12 +122,12 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import '../styles/palette.less';
+<style lang="scss">
+@import '../styles/palette.scss';
 
 .home {
-  padding: @navbarHeight 2rem 0;
-  max-width: @homePageWidth;
+  padding: $navbarHeight 2rem 0;
+  max-width: $homePageWidth;
   margin: 0px auto;
   display: block;
   margin-bottom: 40px;
@@ -163,15 +163,15 @@ export default {
       display: inline-block;
       font-size: 1.2rem;
       color: #fff;
-      background-color: @accentColor;
+      background-color: $accentColor;
       padding: 0.8rem 1.6rem;
       border-radius: 4px;
       transition: background-color 0.1s ease;
       box-sizing: border-box;
-      border-bottom: 1px solid darken(@accentColor, 10%);
+      border-bottom: 1px solid darken($accentColor, 10%);
 
       &:hover {
-        background-color: lighten(@accentColor, 10%);
+        background-color: lighten($accentColor, 10%);
       }
     }
   }
@@ -197,11 +197,11 @@ export default {
       font-weight: 500;
       border-bottom: none;
       padding-bottom: 0;
-      color: lighten(@textColor, 10%);
+      color: lighten($textColor, 10%);
     }
 
     p {
-      color: lighten(@textColor, 25%);
+      color: lighten($textColor, 25%);
       margin-top: 0.5rem;
     }
   }
@@ -250,7 +250,7 @@ export default {
         color: #fff;
       }
       a:hover {
-        color: @accentColor;
+        color: $accentColor;
       }
       .footer-item-separator {
         margin: 0 0.3em;
@@ -273,7 +273,7 @@ export default {
   }
 }
 
-@media (max-width: @MQMobile) {
+@media (max-width: $MQMobile) {
   .home {
     .hero {
       .hero-logo {
@@ -311,7 +311,7 @@ export default {
   }
 }
 
-@media (max-width: @MQMobileNarrow) {
+@media (max-width: $MQMobileNarrow) {
   .home {
     padding-left: 1.5rem;
     padding-right: 1.5rem;

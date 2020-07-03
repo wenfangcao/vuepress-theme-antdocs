@@ -1,5 +1,5 @@
 .sw-update-popup{
-  border-color: @accentColor !important;
+  border-color: $accentColor !important;
 
   button{
     line-height: 1.6;
@@ -17,8 +17,8 @@
 
     &:hover,
     &:active{
-      border-color: @accentColor;
-      color: @accentColor;
+      border-color: $accentColor;
+      color: $accentColor;
     }
   }
 }

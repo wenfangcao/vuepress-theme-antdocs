@@ -174,8 +174,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import '../styles/palette.less';
+<style lang="scss">
+@import '../styles/palette.scss';
 
 .nav-links {
   float: right;
@@ -188,15 +188,15 @@ export default {
     position: absolute;
     right: 1.7rem;
     top: 0;
-    line-height: @navbarHeight;
+    line-height: $navbarHeight;
 
     &:hover {
-      color: @accentColor;
+      color: $accentColor;
     }
   }
 }
 
-@media (max-width: @MQMobile) {
+@media (max-width: $MQMobile) {
   .nav-links {
     float: none;
     margin-right: 0;

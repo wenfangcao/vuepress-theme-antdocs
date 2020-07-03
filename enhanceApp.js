@@ -1,6 +1,7 @@
 import store from './store';
 import Antd from 'ant-design-vue';
-import './styles/index.less';
+import './styles/index.scss';
+import 'ant-design-vue/dist/antd.less';
 
 export default ({
   Vue,

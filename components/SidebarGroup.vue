@@ -57,8 +57,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import '../styles/palette.less';
+<style lang="scss">
+@import '../styles/palette.scss';
 
 .sidebar-group {
   .sidebar-group {
@@ -122,7 +122,7 @@ export default {
     color: inherit;
   }
   &:hover{
-    color: @accentColor;
+    color: $accentColor;
   }
 
   .arrow {
@@ -133,12 +133,12 @@ export default {
   &.clickable {
     &.active {
       font-weight: 600;
-      color: @accentColor;
-      border-left-color: @accentColor;
+      color: $accentColor;
+      border-left-color: $accentColor;
     }
 
     &:hover {
-      color: @accentColor;
+      color: $accentColor;
     }
   }
 }

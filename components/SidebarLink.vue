@@ -104,8 +104,8 @@ function renderExternal (h, to, text) {
 }
 </script>
 
-<style lang="less">
-@import '../styles/palette.less';
+<style lang="scss">
+@import '../styles/palette.scss';
 
 .sidebar .sidebar-sub-headers {
   padding-left: 1rem;
@@ -137,7 +137,7 @@ a.sidebar-link {
     top: 0;
     right: 0;
     bottom: 0;
-    border-right: 3px solid @accentColor;
+    border-right: 3px solid $accentColor;
     transform: scaleY(0.0001);
     opacity: 0;
     transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -145,12 +145,12 @@ a.sidebar-link {
   }
 
   &:hover {
-    color: @accentColor;
+    color: $accentColor;
   }
 
   &.active {
-    color: @accentColor;
-    background-color: fade(@accentColor, 10%);
+    color: $accentColor;
+    background-color: fade($accentColor, 10%);
 
     &::after {
       transform: scaleY(1);
@@ -178,7 +178,7 @@ a.sidebar-link {
   }
 }
 
-@media (max-width: @MQMobile) {
+@media (max-width: $MQMobile) {
   a.sidebar-link {
     &.active {
       &::after {

@@ -52,8 +52,8 @@ export default {
 };
 </script>
 
-<style lang="less">
-@import '../styles/palette.less';
+<style lang="scss">
+@import '../styles/palette.scss';
 
 .ads {
   padding: 0 1rem 0.6rem;
@@ -66,7 +66,7 @@ export default {
     img {
       float: left;
       margin-right: 1rem;
-      max-width: @AdsStyle1MW;
+      max-width: $AdsStyle1MW;
     }
   }
 
@@ -93,12 +93,12 @@ export default {
   margin: 5px 0;
 }
 
-@media (max-width: @MQMobile) {
+@media (max-width: $MQMobile) {
   .ads {
-    display: @MobileShow;
+    display: $MobileShow;
   }
   #reset-margin {
-    display: @MobileShow;
+    display: $MobileShow;
   }
 }
 </style>

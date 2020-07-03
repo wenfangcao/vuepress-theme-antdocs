@@ -92,11 +92,11 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import '../styles/palette.less';
+<style lang="scss">
+@import '../styles/palette.scss';
 
 .toggle-sidebar{
-  transform: translateX(@sidebarWidth * 0.82) ;
+  transform: translateX($sidebarWidth * 0.82) ;
 }
 .navbar {
   line-height: 4rem;
@@ -110,7 +110,7 @@ export default {
   .home-link {
     display: flex;
     align-items: center;
-    line-height: @navbarHeight;
+    line-height: $navbarHeight;
 
     &.no-logo{
       justify-content: center;
@@ -118,15 +118,15 @@ export default {
   }
 
   .logo {
-    height: @navbarLogoHeight;
-    min-width: @navbarLogoHeight;
+    height: $navbarLogoHeight;
+    min-width: $navbarLogoHeight;
     margin: 0 0.8rem 0 2.4rem;
   }
 
   .site-name {
     font-size: 1.3rem;
     font-weight: 500;
-    color: @textColor;
+    color: $textColor;
     position: relative;
     white-space: nowrap;
     overflow: hidden;
@@ -161,7 +161,7 @@ export default {
 }
 .sidebarWrap {
   .ant-drawer-content-wrapper {
-    width: @sidebarWidth * 0.82 !important;
+    width: $sidebarWidth * 0.82 !important;
   }
   .ant-drawer-body {
     padding-left: 0;
@@ -225,7 +225,7 @@ export default {
     display: none;
   }
 }
-@media (max-width: @MQMobile) {
+@media (max-width: $MQMobile) {
   .navbar {
     .home-link {
       justify-content: center;
@@ -237,7 +237,7 @@ export default {
   }
 }
 
-@media (max-width: @MQMobile) {
+@media (max-width: $MQMobile) {
   .navbar {
     position: relative;
     

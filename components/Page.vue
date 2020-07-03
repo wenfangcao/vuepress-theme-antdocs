@@ -21,16 +21,16 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import '../styles/palette.less';
-@import "../styles/wrapper.less";
+<style lang="scss">
+@import '../styles/palette.scss';
+@import "../styles/wrapper.scss";
 .page {
   padding-bottom: 2rem;
   display: block;
 }
-@media (max-width: @MQMobile) {
+@media (max-width: $MQMobile) {
   .page {
-    margin-top: -@navbarHeight;
+    margin-top: -$navbarHeight;
   }
 }
 </style>

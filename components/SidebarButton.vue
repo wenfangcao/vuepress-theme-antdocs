@@ -33,8 +33,8 @@ export default {
 };
 </script>
 
-<style lang="less">
-@import '../styles/palette.less';
+<style lang="scss">
+@import '../styles/palette.scss';
 
 .sidebar-button {
   cursor: pointer;
@@ -61,7 +61,7 @@ export default {
   }
 }
 
-@media (max-width: @MQMobile) {
+@media (max-width: $MQMobile) {
   .sidebar-button {
     display: block;
   }

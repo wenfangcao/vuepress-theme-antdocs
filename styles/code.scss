@@ -1,4 +1,4 @@
-.@{contentClass} {
+.content__default {
   code {
     padding: 0.2rem 0.5rem;
     margin: 0;
@@ -13,18 +13,18 @@
       }
 
       &.inserted {
-        color: @accentColor;
+        color: $accentColor;
       }
     }
   }
 }
 
-.@{contentClass} {
+.content__default {
   pre, pre[class*='language-'] {
     line-height: 1.4;
     padding: 1.25rem 1.5rem;
     margin: 0.85rem 0;
-    background-color: @codeBgColor;
+    background-color: $codeBgColor;
     border-radius: 3px;
     overflow: auto;
 
@@ -39,7 +39,7 @@
 
 div[class*='language-'] {
   position: relative;
-  background-color: @codeBgColor;
+  background-color: $codeBgColor;
   border-radius: 3px;
   font-size: 16px;
 
@@ -97,21 +97,21 @@ div[class*='language-'] {
         left: 0;
         top: 0;
         display: block;
-        width: @lineNumbersWrapperWidth;
+        width: $lineNumbersWrapperWidth;
         height: 100%;
         background-color: rgba(0, 0, 0, 66%);
       }
     }
 
     pre {
-      padding-left: @lineNumbersWrapperWidth + 1;
+      padding-left: $lineNumbersWrapperWidth + 1;
       vertical-align: middle;
     }
 
     .line-numbers-wrapper {
       position: absolute;
       top: 0;
-      width: @lineNumbersWrapperWidth;
+      width: $lineNumbersWrapperWidth;
       text-align: center;
       color: rgba(255, 255, 255, 0.3);
       padding: 1.25rem 0;
@@ -135,21 +135,21 @@ div[class*='language-'] {
       z-index: 2;
       top: 0;
       left: 0;
-      width: @lineNumbersWrapperWidth;
+      width: $lineNumbersWrapperWidth;
       height: 100%;
       border-radius: 6px 0 0 6px;
       border-right: 1px solid rgba(0, 0, 0, 66%);
-      background-color: @codeBgColor;
+      background-color: $codeBgColor;
     }
   }
 }
 
 
-each(@codeLang, {
-  div[class*="language-@{value}"]:before {
-    content: "@{value}";
-  }
-});
+// each($codeLang, {
+//   div[class*="language-${value}"]:before {
+//     content: "${value}";
+//   }
+// });
 
 div[class~='language-javascript']:before {
   content: 'js';

@@ -23,8 +23,8 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-@import '../styles/palette.less';
+<style lang="scss" scoped>
+@import '../styles/palette.scss';
 
 .badge {
   display: inline-block;
@@ -34,18 +34,18 @@ export default {
   border-radius: 3px;
   padding: 0 6px;
   color: white;
-  background-color: @badgeTipColor;
+  background-color: $badgeTipColor;
 
   &.tip, &.green {
-    background-color: @badgeTipColor;
+    background-color: $badgeTipColor;
   }
 
   &.error {
-    background-color: @badgeErrorColor;
+    background-color: $badgeErrorColor;
   }
 
   &.warning, &.warn, &.yellow {
-    background-color: @badgeWarningColor;
+    background-color: $badgeWarningColor;
   }
 
   & + & {

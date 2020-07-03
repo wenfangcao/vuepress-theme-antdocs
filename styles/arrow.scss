@@ -1,4 +1,4 @@
-@import './config.less';
+@import './config.scss';
 .arrow {
   display: inline-block;
   opacity: .7;
@@ -8,7 +8,7 @@
   &.up {
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
-    border-bottom: 6px solid @arrowBgColor;
+    border-bottom: 6px solid $arrowBgColor;
   }
 
   &.down {
@@ -22,6 +22,6 @@
   &.left {
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
-    border-right: 6px solid @arrowBgColor;
+    border-right: 6px solid $arrowBgColor;
   }
 }
